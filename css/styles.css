@@ -139,3 +139,52 @@ a.custom-card:hover {
 .checked {
   color: orange;
 }
+
+
+
+.form-login{
+  width: 450px;
+  height: 300px;
+  background: #3b3b3b;
+  box-shadow: 10px 15px 40px #000;
+  margin: auto;
+  margin-top: 140px;
+  border-top: 4px solid #0087F7;
+  padding: 18px 28px;
+  color: white;
+}
+
+.form-login h5{
+  text-align: center;
+  height: 40px;
+  margin: 0px;
+  margin-bottom: 30px;
+  font-size: 25px;
+}
+
+.checkbox-login{
+  width: 100%;
+  height: 30px;
+  color: white;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.controls{
+  width: 100%;
+  border: 1px solid #0087F7;
+  margin-bottom: 15px;
+  background: #272727;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 10px;
+}
+
+.buttons{
+  width: 100%;
+  color: white;
+  height: 35px;
+  background: #0087F7;
+  font-weight: bolder;
+  border-radius: 4px;
+}
