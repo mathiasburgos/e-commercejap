@@ -1,5 +1,6 @@
 var product = {};
 let comentarios = {};
+let relProducts = [];
 function showImagesGallery(array){
 
     let htmlContentToAppend = "";
@@ -65,15 +66,16 @@ function showComments (){
         </dl>
         </div>`
     }
-    document.getElementById("coms").innerHTML = html;
+    document.getElementById("sComs").innerHTML = html;
 };
 
 function saveComment(){
     let date = new Date();
+    let post = "";
     let structure = date.getDate().toString().padStart(2, `0`) + "/" + (date.getMonth() + 1).toString().padStart(2, `0`) + "/" + date.getFullYear().toString()+ " " + date.getHours() + ":" + date.getMinutes();
-    post = { message: document.getElementById("newComm").value,
-    actualDate: structure,
-    score: document.getElementById("score").value,
+    post = { description: document.getElementById("newCom").value,
+    dateTime: structure,
+    score: document.getElementById("rating").value,
     user: JSON.parse(localStorage.getItem("User-Logged")).email,
     
     }
@@ -90,22 +92,5 @@ function rating (stars){
     for(let s= num+1; s<=5; s++){
         addHtml += `<span class="fa fa-star " > </span>`
     }
+    return addHtml;
 }
-
-
-    // getJSONData(PRODUCT_INFO_COMMENTS_URL).then(function(resultObj){
-    //     if (resultObj.status === "ok")
-    //     {
-    //         comments = resultObj.data;
-
-    //         let commentsScoreHTML  = document.getElementById("commentsScore");
-    //         let commentsDescriptionHTML = document.getElementById("commentsDescription");
-    //         let commentsUser = document.getElementById("commentsUser");
-    //         let commentsDateTime = docuement.getElementById ("commentsDateTime")
-        
-    //         commentsScoreHTML = comments.score
-    //         commentsDescriptionHTML = comments.description
-    //         commentsUser = comments.user
-    //         commentsDateTime = comments.dateTime
-    //     }
-    // });
