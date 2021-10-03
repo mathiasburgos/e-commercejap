@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
         inputPassword.classList.remove("invalid");
       }
       if (camposCompletos) {
+        localStorage.setItem('User-Logged', JSON.stringify({ email: inputEmail.value }));
         window.location = "main.html";
       } else {
         alert("Ingresar los datos por favor");

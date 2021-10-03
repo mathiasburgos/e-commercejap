@@ -67,6 +67,10 @@ footer p {
   color: black;
 }
 
+#user{
+  color: white;
+  transition: ease-in-out color .15s;
+}
 .dropzone{
   border: 2px dashed #0087F7;
   border-radius: 5px;

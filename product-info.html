@@ -23,16 +23,57 @@
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
       <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+      <div id="info-user" style="display: none;">
+        <p class="py-2 d-none d-md-inline-block" id="user"></p>
+        <button id="salir">Salir</button>
+      </div>
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 3 (Fecha de entrega: 19/09/2021) y Entrega 4 (Fecha de entrega: 03/10/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+  <main role="main">
+    <div class="container mt-5">
+      <div class="text-center p-4">
+        <h2>Descripción del producto</h2>
+      </div>
+      <h3 id="productName"></h3>
+      <hr class="my-3">
+      <dl>
+        
+        <dt>Descripción</dt>
+        <dd>
+          <p id="productDescription"></p>
+        </dd>
+
+        <dt>Precio</dt>
+        <dd>
+          <p id="productCost"></p>
+        </dd>
+        
+        <dt>Imágenes ilustrativas</dt>
+        <dd>
+          <div class="row text-center text-lg-left pt-2" id="prodImagesGallery">
+          </div>
+        </dd>
+      </dl>
+      <h2> Comentarios</h2>
+      <div id="coms">
+        <p></p>
+      </div>
+      <div id="newComCont" style="display: none;">
+        <textarea id="newComm" cols="20" rows="5"></textarea>
+        <div class="form-group" id="score">
+          <strong> Reseña </strong><br>
+          <label for="score"></label>
+          <button type="button" class="btn btn-outline-secondary" id="1">1</button>
+          <button type="button" class="btn btn-outline-secondary" id="2">2</button>
+          <button type="button" class="btn btn-outline-secondary" id="3">3</button>
+          <button type="button" class="btn btn-outline-secondary" id="4">4</button>
+          <button type="button" class="btn btn-outline-secondary" id="5">5</button><br>
+          <button type="button" class="btn btn outline-secondary" onclick="saveComment()">Enviar</button>
+        </div>
+      </div>
+      <a type="button" class="btn btn-light btn-lg btn-block" href="products.html">Ver productos</a>
     </div>
-  </div>
+  </main>
   <footer class="text-muted">
     <div class="container">
       <p class="float-right">
@@ -55,5 +96,6 @@
   <script src="js/init.js"></script>
   <script src="js/product-info.js"></script>
 </body>
+</div>
 
 </html>
