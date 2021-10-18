@@ -1,6 +1,8 @@
 var product = {};
+var products = {};
 let comentarios = {};
-let relProducts = [];
+var arrayProductos = {};
+let bringProd = {}; 
 function showImagesGallery(array){
 
     let htmlContentToAppend = "";
@@ -33,8 +35,8 @@ document.addEventListener("DOMContentLoaded", function(e){
             productNameHTML.innerHTML = product.name;
             productDescriptionHTML.innerHTML = product.description;
             productCostHTML.innerHTML = product.currency + ' ' + product.cost;
-
             //Muestro las imagenes en forma de galería
+            
             showImagesGallery(product.images);
         }
     });
@@ -94,3 +96,59 @@ function rating (stars){
     }
     return addHtml;
 }
+
+function showRelatedProducts (array1, array2){
+    let htmlContentToAppend = "";
+    for (let i= 0; i < array2.length; i++){
+    let relacion = array1[array2[i]];
+        htmlContentToAppend += `
+    <div class="col-lg-3 col-md-4 col-6">
+    <div class="d-block mb-4 h-100">
+    <img class="img-fluid img-thumbnail" src="` + relacion.imgSrc + `" alt="">
+    </div>
+    `
+}
+document.getElementById("relatedProducts1").innerHTML = htmlContentToAppend;
+};
+
+
+document.addEventListener("DOMContentLoaded", function(e){
+    getJSONData(PRODUCTS_URL).then(function(result){
+        if (result.status === "ok") {products = result.data;}
+
+        getJSONData(PRODUCT_INFO_URL).then(function(resultado){
+            if (resultado.status === "ok"){info = resultado.data;}
+            showRelatedProducts(products, info.relatedProducts);
+    });
+}); 
+});
+
+
+
+
+
+// let product1 = [];
+
+// function relacionados (arrayRel){
+//     let html1 = "";
+//         for (let i = 0; i < arrayRel.length; i++) {
+//             let mathi = product1[arrayRel[i]];
+//             html1 = `
+//             <div class= "container">
+//             <img src= "`+ mathi.imgSrc +`" class= "card-img-top" alt="">
+//             <h5 class= "card-titles">`+ mathi.name + `</h5>
+//             <p class="text"> `+ mathi.description +` </p>
+//             `
+//         document.getElementById("relatedProducts").innerHTML = html1;
+//         }
+//     };
+
+// document.addEventListener("DOMContentLoaded", function(){
+// getJSONData(PRODUCT_INFO_URL).then(result => {
+//     if (result.status === "ok"){
+//         product1 = resultObj.data  
+//         let asdf = product1.mathi;
+//         relacionados (asdf);
+//     }
+// });
+// });

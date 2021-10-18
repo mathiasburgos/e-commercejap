@@ -22,10 +22,13 @@
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-      <div id="info-user" style="display: none;">
-        <p class="py-2 d-none d-md-inline-block" id="user"></p>
-        <button id="salir">Salir</button>
+      <div id="info-user" style="display: none;" class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle" id="user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+        <div class="dropdown-menu" aria-labelledby="user">
+          <a href="cart.html" class="dropdown-item"> Carrito</a>
+          <a href="my-profile.html" class="dropdown-item"> Perfil</a>
+          <a href="#" id="salir" class="dropdown-item"> Salir</a>
+        </div>>
       </div>
     </div>
   </nav>
@@ -53,26 +56,36 @@
           <div class="row text-center text-lg-left pt-2" id="prodImagesGallery">
           </div>
         </dd>
+        <dt> Relacion de Productos
+          <div id="relatedProducts1"></div>
+        </dt>
       </dl>
-      <h2> Comentarios</h2>
-      <div id="coms">
-        <p></p>
-      </div>
-      <div id="newComCont" style="display: none;">
-        <textarea id="newComm" cols="20" rows="5"></textarea>
-        <div class="form-group" id="score">
-          <strong> Reseña </strong><br>
-          <label for="score"></label>
-          <button type="button" class="btn btn-outline-secondary" id="1">1</button>
-          <button type="button" class="btn btn-outline-secondary" id="2">2</button>
-          <button type="button" class="btn btn-outline-secondary" id="3">3</button>
-          <button type="button" class="btn btn-outline-secondary" id="4">4</button>
-          <button type="button" class="btn btn-outline-secondary" id="5">5</button><br>
-          <button type="button" class="btn btn outline-secondary" onclick="saveComment()">Enviar</button>
+      <div class="container mt-5">
+        <div class="text-center p-4" id="sComs"> <h3>Comentarios</h3></div>
+        <div class="text-center p-4">
+          <div class="text-lg-left">
+      <form id="form">
+        <div class="form-group">
+          <label for="comente">
+            <strong>Agregue un comentario</strong></label><br>
+            <textarea name="commentaries" id="newCom" rows="5" cols="40" placeholder="Escriba su comentario aqui"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="rating"><strong>Puntuación</strong></label>
+            <select class="form-control" id="rating">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+            <br>
+            <button type="button" class="btn-outline-primary" onclick="saveComment()">Enviar</button>
+          </div>
+        </div>
+          </form>
         </div>
       </div>
-      <a type="button" class="btn btn-light btn-lg btn-block" href="products.html">Ver productos</a>
-    </div>
   </main>
   <footer class="text-muted">
     <div class="container">
