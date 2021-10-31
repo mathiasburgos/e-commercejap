@@ -44,20 +44,15 @@ function showProductsList(){ //carga los productos, si se cumple con condicion d
             ((maxCount == undefined) || (maxCount != undefined && parseInt(product.cost) <= maxCount))) {
 
                 htmlContentToAppend += `
-                <a href="product-info.html" class="list-group-item list-group-item-action">
-                    <div class="row">
-                        <div class="col-3">
-                            <img src="` + product.imgSrc + `" alt="` + product.description + `" class="img-thumbnail">
-                        </div>
-                        <div class="col">
-                            <div class="d-flex w-100 justify-content-between">
-                                <h4 class="mb-1">`+ product.name +`</h4>
-                                <small class="text-muted">` + product.currency + " " + product.cost + `</small>
-                            </div>
-                            <p class="mb-1">` + product.description + `</p>
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <a href="product-info.html" class="card mb-4 shadow-sm custom-card border-0">
+                            <img class="bd-placeholder-img card-img-top" src="` + product.imgSrc + `">
+                            <h3 class="card-title">`+ product.name +`</h3>
+                        <div class="card-body">
+                            <p class="card-subtitle">` + product.currency + " " + product.cost + `</p>
+                            <p class="card-text">` + product.description + `</p>
                         </div>
                     </div>
-                </a>
                 `
             }
 

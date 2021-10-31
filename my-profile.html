@@ -40,24 +40,50 @@
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
+      <div class="py-2 d-none d-md-inline-block">
       <div id="info-user" style="display: none;" class="nav-item dropdown">
         <a href="#" class="nav-link dropdown-toggle" id="user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
         <div class="dropdown-menu" aria-labelledby="user">
           <a href="cart.html" class="dropdown-item"> Carrito</a>
           <a href="my-profile.html" class="dropdown-item"> Perfil</a>
           <a href="#" id="salir" class="dropdown-item"> Salir</a>
-        </div>>
+        </div>
+      </div>
       </div>
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 6 (Fecha de entrega: 31/10/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+  <div class="container">
+    <h4> Mi Perfil</h4>
+  <div id="guardarPerfil" class="form-group">
+    <div class="form-group">
+      <label for="profileName">Nombres:</label>
+      <input type="text" class="form-control" id="profileName" placeholder="Ingrese su nombre" name="profileName" required>      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Por favor ingrese su nombre.</div>
+    </div>
+    <div class="form-group">
+      <label for="profileSN">Apellidos:</label>
+      <input type="text" class="form-control" id="profileSN" placeholder="Ingrese su apellido" name="profileSN" required>      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Por favor ingrese su apellido.</div>
+    </div>
+    <div class="form-group">
+      <label for="profileName">Edad:</label>
+      <input type="text" class="form-control" id="profileAge" placeholder="Ingrese su edad" name="profileAge" required>      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Por favor ingrese su edad.</div>
+    </div>
+    <div class="form-group">
+      <label for="profileName">Email</label>
+      <input type="text" class="form-control" id="profileEmail" placeholder="Ingrese su email" name="profileEmail" required>      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Por favor ingrese su email.</div>
+    </div>
+    <div class="form-group">
+      <label for="profileName">Telefono</label>
+      <input type="text" class="form-control" id="profileNumber" placeholder="Ingrese su Telefono" name="profileNumber" required>      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Por favor ingrese su número de teléfono.</div>
     </div>
   </div>
+  <button class="btn btn-dark" id="saveProfile">Guardar datos</button>
+</div>
+  
   <footer class="text-muted bg-light">
     <div class="container">
       <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>

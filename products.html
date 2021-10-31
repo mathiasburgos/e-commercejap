@@ -14,7 +14,35 @@
     <link href="css/styles.css" rel="stylesheet">
   </head>
   <body>
-    <nav class="site-header sticky-top py-1 bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="main.html">Inicio</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="categories.html">Categorías <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="products.html">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sell.html">Vender</a>
+          </li>
+          <div id="info-user" style="display: none;" class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" id="user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+            <div class="dropdown-menu" aria-labelledby="user">
+              <a href="cart.html" class="dropdown-item"> Carrito</a>
+              <a href="my-profile.html" class="dropdown-item"> Perfil</a>
+              <a href="#" id="salir" class="dropdown-item"> Salir</a>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </nav>
+    <!-- <nav class="site-header sticky-top py-1 bg-dark navbar-expand">
       <div class="container d-flex flex-column flex-md-row justify-content-between">
         <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
         <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
@@ -29,11 +57,11 @@
           </div>>
         </div>
       </div>
-    </nav>
+    </nav> -->
     <main role="main" class="pb-5">
       <div class="text-center p-4">
           <h2>Productos</h2>
-          <p class="lead">Verás aquí todas los productos del sitio.</p>
+          <p class="lead">Verás aquí todos los productos del sitio.</p>
       </div>
       <div class="container">
           <div class="row">
@@ -49,11 +77,11 @@
                           <input type="radio" name="options" autocomplete="off"><i class="fas fa-sort-amount-down mr-1"></i>Relevancia.
                       </label>
                   </div>
-              </div>
+            </div>
           </div>
           <div class="row justify-content-end">
             <div class="col-md-6"></div>
-              <div class="col-md-6 col-sm-12 mb-1 container">
+              <div class="col-md-4 col-sm-12 mb-1 container">
                 <div class="row container p-0 m-0">
                   <div class="col">
                     <p class="font-weight-normal text-right my-2">Cant.</p>
@@ -64,7 +92,7 @@
                   <div class="col">
                     <input class="form-control" type="number" placeholder="máx." id="rangeFilterCountMax">
                   </div>
-                  <div class="col-3 p-0">
+                  <div class="col p-0">
                     <div class="btn-group" role="group">
                       <button class="btn btn-light btn-block" id="rangeFilterCount">Filtrar</button>
                       <button class="btn btn-link btn-sm" id="clearRangeFilter">Limpiar</button>
@@ -72,11 +100,10 @@
                   </div>
                 </div>
               </div>
+            </div>
+          <div class="row album py-5 bg-light" id="prod-list-container">
           </div>
-          <div class="row">
-              <div class="list-group" id="prod-list-container">
-              </div>
-          </div>
+        </div>
       </div>
   </main>
     <footer class="text-muted bg-light">

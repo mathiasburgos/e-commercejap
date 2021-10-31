@@ -1,5 +1,4 @@
 var artComprados = {};
-let costInput = 0;
 // let unitCost = 0;
 let currency = "$"
 

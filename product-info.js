@@ -99,8 +99,8 @@ function rating (stars){
 
 function showRelatedProducts (array1, array2){
     let htmlContentToAppend = "";
-    for (let i= 0; i < array2.length; i++){ 
-    let relacion = array1[array2[i]]; // seteo recorrido del for
+    for (let i= 0; i < array2.length; i++){
+    let relacion = array1[array2[i]];
         htmlContentToAppend += `
     <div class="col-lg-3 col-md-4 col-6">
     <div class="d-block mb-4 h-100">
